@@ -29,6 +29,4 @@ It is similar to older and outdated Arduino_TensorFlowLite Micro example library
 
 For more details on how to use this library, refer to the `hello_world` example included in the repository.
 
----
 
-This should make it easy to read and understand for users looking to utilize the library on GitHub.
