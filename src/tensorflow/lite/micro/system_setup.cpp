@@ -23,6 +23,11 @@ limitations under the License.
 
 #include "Arduino.h"
 
+#ifndef ARDUINO_ARCH_MBED
+#include "system_ArduinoRingBuffer.h"
+using namespace arduino;
+#endif
+
 // The Arduino DUE uses a different object for the default serial port shown in
 // the monitor than most other models, so make sure we pick the right one. See
 // https://github.com/arduino/Arduino/issues/3088#issuecomment-406655244
