@@ -1,18 +1,18 @@
 
-# TensorFlow Lite Micro Library for Arduino mbed_nano
+# TensorFlow Lite Micro Library for Arduino
 
 ## Overview
 
-This is a port of the TensorFlow Lite Micro Library to the Arduino mbed_nano platform, aimed at enabling Tiny Machine Learning (TinyML) experiments on Arduino Nano 33 BLE boards.
+This is a port of the TensorFlow Lite Micro Library to the Arduino platform, aimed at enabling Tiny Machine Learning (TinyML) experiments on all Arduino boards with mbed or ESP32 architecture.
 
 ## Compatibility
 
-- **Supported Boards**: Arduino Nano 33 BLE
-- **Other Boards**: Compatibility with other Arduino boards is not guaranteed and may require additional adaptations.
+- **Tested Boards**: Arduino Nano 33 BLE, Arduino Nano ESP32, Arduino Nicla, Arduino Portenta
+- **Other Boards**: Compatibility with other Arduino boards is not guaranteed and must be tested.
 
 ## Resources
 
-The Arduino Nano 33 BLE boards have sufficient resources to host TensorFlow Lite (TFLite) models.
+The Arduino boards with mbed or ESP32 architecture have sufficient resources to host TensorFlow Lite (TFLite) models.
 
 ## Experimental Nature
 
