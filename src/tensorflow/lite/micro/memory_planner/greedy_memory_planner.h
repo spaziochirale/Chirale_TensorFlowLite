@@ -156,7 +156,7 @@ class GreedyMemoryPlanner : public MicroMemoryPlanner {
 
   // Whether buffers have been added since the last plan was calculated.
   bool need_to_calculate_offsets_;
-
+public:
   TF_LITE_REMOVE_VIRTUAL_DELETE
 };
 
