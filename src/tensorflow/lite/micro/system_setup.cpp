@@ -41,11 +41,11 @@ extern "C" void DebugLog(const char* s) { DEBUG_SERIAL_OBJECT.print(s); }
 
 namespace tflite {
 
-constexpr ulong kSerialMaxInitWait = 4000;  // milliseconds
+constexpr unsigned long kSerialMaxInitWait = 4000;  // milliseconds
 
 void InitializeTarget() {
   DEBUG_SERIAL_OBJECT.begin(9600);
-  ulong start_time = millis();
+  unsigned long start_time = millis();
   while (!DEBUG_SERIAL_OBJECT) {
     // allow for Arduino IDE Serial Monitor synchronization
     if (millis() - start_time > kSerialMaxInitWait) {
@@ -61,7 +61,7 @@ namespace test_over_serial {
 // Change baud rate on default serial port
 void SerialChangeBaudRate(const int baud) {
   DEBUG_SERIAL_OBJECT.begin(baud);
-  ulong start_time = millis();
+  unsigned long start_time = millis();
   while (!DEBUG_SERIAL_OBJECT) {
     // allow for Arduino IDE Serial Monitor synchronization
     if (millis() - start_time > tflite::kSerialMaxInitWait) {
@@ -95,7 +95,7 @@ std::pair<size_t, char*> SerialReadLine(int timeout) {
     _ring_buffer.clear();
   }
 
-  ulong start_time = millis();
+  unsigned long start_time = millis();
 
   while (true) {
     int value = DEBUG_SERIAL_OBJECT.read();
@@ -119,7 +119,7 @@ std::pair<size_t, char*> SerialReadLine(int timeout) {
     if (timeout < 0) {
       // wait forever
       continue;
-    } else if (millis() - start_time >= static_cast<ulong>(timeout)) {
+    } else if (millis() - start_time >= static_cast<unsigned long>(timeout)) {
       // timeout
       return std::make_pair(0UL, reinterpret_cast<char*>(NULL));
     }
