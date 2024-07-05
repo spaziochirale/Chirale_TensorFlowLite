@@ -26,7 +26,7 @@ limitations under the License.
 ==============================================================================*/
 
 // include main library header file
-#include <TensorFlowLite.h>
+#include <Chirale_TensorFlowLite.h>
 
 // include static array definition of pre-trained model
 #include "model.h"
